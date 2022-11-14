@@ -1,0 +1,34 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+span,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+.flex-items-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(15rem, 4fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
