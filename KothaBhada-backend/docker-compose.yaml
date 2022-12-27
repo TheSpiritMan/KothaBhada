@@ -1,0 +1,25 @@
+version: '3'
+services:
+  db:
+    image: mysql
+    container_name: db
+    ports:
+      - "6033:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: KothaBhada
+    volumes:
+      - ./init_data:/docker-entrypoint-initdb.d
+    restart: always
+    tty: true
+
+  backend:
+    image: kothabhada-backend:latest
+    container_name: backend
+    ports:
+      - "8080:8080"
+    tty: true
+    restart: always
+
+volumes:
+  init_data: {}
